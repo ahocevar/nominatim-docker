@@ -2,7 +2,7 @@
 
 Run [http://wiki.openstreetmap.org/wiki/Nominatim](http://wiki.openstreetmap.org/wiki/Nominatim) in a docker container. Clones the current master and builds it. This is always the latest version, be cautious as it may be unstable.
 
-Uses Ubuntu 14.04 and PostgreSQL 9.3
+Uses Ubuntu 18.04 and PostgreSQL 9.3
 
 # Country
 As default it downloads Europe/Monacco (latest) from geofabrik.de during build. This can be changed by setting a build arg.
