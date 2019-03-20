@@ -18,7 +18,7 @@ RUN apt-get -y install build-essential gcc git osmosis  libxml2-dev libgeos-dev 
 RUN apt-get -y install autoconf make g++ libboost-dev libboost-system-dev libboost-filesystem-dev libboost-thread-dev lua5.2 liblua5.2-dev
 
 # Install PHP7
-RUN apt-get -y install php7.2 php-pear php7.2-pgsql php7.2-json php-db
+RUN apt-get -y install php7.2 php-pear php7.2-pgsql php7.2-json php7.2-intl php-db
 
 # From the website "If you plan to install the source from github, the following additional packages are needed:"
 # RUN apt-get -y install git autoconf-archive
