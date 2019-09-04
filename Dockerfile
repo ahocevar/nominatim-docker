@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 MAINTAINER Jan Nonnen <helvalius@gmail.com>
-# Define the OSM argument, use monaco as default
-ARG OSM=http://download.geofabrik.de/europe/monaco-latest.osm.pbf
+# Define the OSM argument, use austria as default
+ARG OSM=http://download.geofabrik.de/europe/austria-latest.osm.pbf
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -119,6 +119,16 @@ RUN echo "Using OSM URL: "$OSM
 
 CMD /app/nominatim/start.sh
 
-# docker-compose docker-compose.yml services, ports
-# postgis von mdillon
-# geoserver von terrestris oder geosolutions
+#PHOTON
+#RUN add-apt-repository ppa:webupd8team/java
+#RUN apt-get update
+#RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+#RUN apt-get install -y oracle-java8-installer
+#RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+#RUN mkdir /photon
+#WORKDIR /photon
+# Expose Photon Webservice
+#EXPOSE 2322
+#RUN wget https://github.com/komoot/photon/releases/download/0.3.0/photon-0.3.0.jar
+#COPY ./startup.sh /photon/
+#RUN chmod +x /photon/startup.sh
